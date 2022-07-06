@@ -1,3 +1,31 @@
+function newCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#user-input").value;
+  let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(showCityTemp);
+  console.log(apiUrl);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", newCity);
+
+function showCityTemp(result) {
+  console.log(result.data);
+  document.querySelector("#city").innerHTML = result.data.name;
+  document.querySelector("h3").innerHTML = Math.round(result.data.main.temp);
+  document.querySelector("#H").innerHTML = Math.round(
+    result.data.main.temp_max
+  );
+  document.querySelector("#L").innerHTML = Math.round(
+    result.data.main.temp_min
+  );
+  document.querySelector("#feelsLike").innerHTML = Math.round(
+    result.data.main.feels_like
+  );
+}
+
 let rightNow = new Date();
 function formattedDate(rightNow) {
   let newMonth = rightNow.getMonth();
@@ -53,32 +81,3 @@ function formattedTime(time) {
 let time = document.querySelector("time");
 let theTime = new Date();
 time.innerHTML = formattedTime(theTime);
-
-function showCityTemp(result) {
-  console.log(result.data);
-
-  document.querySelector("#city").innerHTML = result.data.name;
-  document.querySelector("h3").innerHTML = Math.round(result.data.main.temp);
-  document.querySelector("#H").innerHTML = Math.round(
-    result.data.main.temp_max
-  );
-  document.querySelector("#L").innerHTML = Math.round(
-    result.data.main.temp_min
-  );
-  document.querySelector("#feelsLike").innerHTML = Math.round(
-    result.data.main.feels_like
-  );
-}
-
-function newCity(event) {
-  event.preventDefault();
-  let city = document.querySelector("#user-input").value;
-  let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
-  console.log(apiUrl);
-  axios.get(apiUrl).then(showCityTemp);
-}
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", newCity);
