@@ -72,17 +72,15 @@ function showCityTemp(result) {
     result.data.main.feels_like
   );
 
-  newCity(result.data.coord);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/10d@2x.png`
+    `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`
   );
 }
 
 function newCity(event) {
   event.preventDefault();
-
   let city = document.querySelector("#user-input").value;
   let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
