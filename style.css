@@ -11,7 +11,9 @@ h2 {
   font-size: 18px;
   font-weight: 400;
 }
+
 h3 {
+  position: relative;
   font-size: 55px;
   color: red;
 }
@@ -64,6 +66,7 @@ h5 {
 .high,
 .low,
 .high-low-break {
+  color: #3c679e;
   font-size: 24px;
   font-weight: 600px;
 }
@@ -93,4 +96,9 @@ h5 {
 }
 .gitLink {
   text-align: center;
+}
+.units {
+  color: #341b6a;
+  font-size: smaller;
+  font-weight: lighter;
 }

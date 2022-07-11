@@ -50,7 +50,7 @@ function formattedTime(time) {
 
   return `${hours}:${minutes}`;
 }
-let time = document.querySelector("time");
+let time = document.querySelector("#time");
 let theTime = new Date();
 time.innerHTML = formattedTime(theTime);
 
@@ -61,7 +61,9 @@ function showCityTemp(result) {
   console.log(result.data);
 
   document.querySelector("#city").innerHTML = result.data.name;
-  document.querySelector("h3").innerHTML = Math.round(result.data.main.temp);
+  document.querySelector("#currentTemp").innerHTML = Math.round(
+    result.data.main.temp
+  );
   document.querySelector("#H").innerHTML = Math.round(
     result.data.main.temp_max
   );
