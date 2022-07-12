@@ -12,16 +12,17 @@ h2 {
   font-weight: 400;
 }
 
-h3 {
-  position: relative;
-  font-size: 55px;
-  color: red;
-}
 h4,
 h5 {
   text-align: center;
   color: #341b6a;
   font-weight: 900px;
+}
+
+strong {
+  position: relative;
+  font-size: 55px;
+  color: red;
 }
 
 .search {
@@ -97,8 +98,22 @@ h5 {
 .gitLink {
   text-align: center;
 }
-.units {
-  color: #341b6a;
+.units,
+.active,
+.not-active {
+  color: rgb(255, 115, 0);
   font-size: smaller;
   font-weight: lighter;
+  cursor: default;
+  text-decoration: none;
+}
+
+.units,
+.active,
+.not-active:hover {
+  text-decoration: none;
+  color: rgb(255, 115, 0);
+  font-size: smaller;
+  font-weight: lighter;
+  cursor: default;
 }
