@@ -98,6 +98,12 @@ function showCityTemp(result) {
   let feelsLike = document.querySelector("#feelsLike");
   feelsLike.innerHTML = Math.round(result.data.main.feels_like);
 
+  let description = document.querySelector("#description");
+  description.innerHTML = result.data.weather[0].description;
+
+  let windSpeed = document.querySelector("#windSpeed");
+  windSpeed.innerHTML = result.data.wind.speed;
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",

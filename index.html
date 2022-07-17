@@ -46,17 +46,7 @@
       </button>
       <header class="main">
         <h1 id="city">New York</h1>
-        <h2>
-          <ul>
-            <li id="current-date">Sunday, June 6</li>
-          </ul>
-          <ul>
-            <time id="time">
-              <span id="hour">10</span>: <span id="min">33</span>
-              <span id="period">AM</span>
-            </time>
-          </ul>
-        </h2>
+
         <div class="weather-wrap">
           <img
             src=" http://openweathermap.org/img/wn/10d@2x.png"
@@ -69,22 +59,39 @@
             <a href="#" id="celcius-link" class="not-active">°C </a> |
             <a href="#" id="fahrenheit-link" class="active">°F</a>
           </span>
+          <div id="description">description</div>
         </div>
         <span class="high"> H:</span> <span id="H">82° </span>
         <span class="high-low-break">|</span>
         <span class="low"> L: </span> <span id="L"> 55° </span>
       </header>
-
+      <div class="col-3">
+        <div class="card2" style="width: 20rem">
+          <div class="card-body">
+            <h2>
+              <ul>
+                <li id="current-date">Sunday, June 6</li>
+              </ul>
+              <ul>
+                <time id="time">
+                  <span id="hour">10</span>: <span id="min">33</span>
+                </time>
+              </ul>
+            </h2>
+          </div>
+        </div>
+      </div>
       <div class="col">
         <div class="card1" style="width: 18rem">
           <div class="card-body">
             <h4 class="card-title">Currently</h4>
             <p class="card-text">
               <span class="currently">
-                Feels like <span id="feelsLike"> A Great Day </span> <br /><br
+                Feels Like:
+                <span id="feelsLike"> A Great Day </span>° <br
               /></span>
-              Wind Speed <i class="fa-solid fa-sun"></i> cloudy <br />
-              <i class="fa-solid fa-moon"></i>
+              Wind Speed:
+              <span id="windSpeed"></span> mph
             </p>
           </div>
         </div>
@@ -95,7 +102,7 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">
-                  Friday <br />
+                  Fri <br />
                   <i class="fa-solid fa-cloud-sun"></i><br />
                   H: 71° | L 56°
                 </p>
@@ -106,7 +113,7 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">
-                  Saturday <br />
+                  Sat <br />
                   <i class="fa-regular fa-sun"></i><br />
                   H: 77° | L: 59°
                 </p>
@@ -117,7 +124,7 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">
-                  Sunday <br />
+                  Sun <br />
                   <i class="fa-regular fa-sun"></i><br />
                   H: 77° | L 56°
                 </p>
@@ -128,7 +135,7 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">
-                  Monday <br />
+                  Mon <br />
                   <i class="fa-regular fa-sun"></i><br />
                   H: 79° | L 55°
                 </p>
@@ -139,7 +146,7 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">
-                  Tuesday <br />
+                  Tue <br />
                   <i class="fa-solid fa-cloud-sun"></i><br />
                   H: 81° | L: 60°
                 </p>
@@ -150,7 +157,7 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">
-                  Wednesday<br />
+                  Wed<br />
                   <i class="fa-regular fa-sun"></i><br />
                   H: 79° | L 58°
                 </p>
