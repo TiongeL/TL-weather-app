@@ -137,3 +137,6 @@ li {
   font-weight: lighter;
   cursor: default;
 }
+.row {
+  padding: 0;
+}
