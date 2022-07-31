@@ -75,6 +75,15 @@ function newCity(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", newCity);
 
+//Define getForecast Funcation//
+function getForecast(coord) {
+  console.log(coord);
+  let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // Display Current Temperature //
 
 function showCityTemp(result) {
@@ -109,6 +118,8 @@ function showCityTemp(result) {
     "src",
     `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(result.data.coord);
 }
 
 // C/F //
@@ -131,7 +142,8 @@ function showFahrenheit(event) {
 
 // 6 day forcast / /
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tue"];
