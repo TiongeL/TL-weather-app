@@ -35,7 +35,7 @@ function formattedDate() {
 
   let day = days[newDay];
 
-  return `${day} ${month} ${date}, ${year}`;
+  return `${day}, ${month} ${date}`;
 }
 
 let finalDate = document.querySelector("#current-date");
@@ -122,24 +122,6 @@ function showCityTemp(result) {
   getForecast(result.data.coord);
 }
 
-// C/F //
-
-function showCelcius(event) {
-  event.preventDefault();
-
-  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-
-  let currentTemperature = document.querySelector("#currentTemp");
-  currentTemperature.innerHTML = Math.round(celciusTemperature);
-}
-
-function showFahrenheit(event) {
-  event.preventDefault();
-
-  let currentTemperature = document.querySelector("#currentTemp");
-  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 // Formatting Forecast Days //
 
 function formatForecast(date) {
@@ -189,12 +171,3 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-let fahrenheitTemperature = null;
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCelcius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheit);
-displayForecast();
