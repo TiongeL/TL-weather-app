@@ -59,31 +59,6 @@ let time = document.querySelector("#time");
 let theTime = new Date();
 time.innerHTML = formattedTime(theTime);
 
-// Search City //
-
-function newCity(event) {
-  event.preventDefault();
-  let city = document.querySelector("#user-input").value;
-  let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
-  axios.get(apiUrl).then(showCityTemp);
-
-  console.log(apiUrl);
-}
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", newCity);
-
-//Define getForecast Funcation//
-function getForecast(coord) {
-  console.log(coord);
-  let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}&units=imperial`;
-  console.log(apiUrl);
-  axios.get(apiUrl).then(displayForecast);
-}
-
 // Display Current Temperature //
 
 function showCityTemp(result) {
@@ -120,6 +95,36 @@ function showCityTemp(result) {
   );
 
   getForecast(result.data.coord);
+}
+
+// Search City //
+
+function search(city) {
+  let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(showCityTemp);
+
+  console.log(apiUrl);
+}
+
+function newCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#user-input");
+  search(city.value);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", newCity);
+search("New York");
+
+//Define getForecast Funcation//
+function getForecast(coord) {
+  console.log(coord);
+  let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 // Formatting Forecast Days //
