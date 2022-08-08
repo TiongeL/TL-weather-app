@@ -86,7 +86,7 @@ function showCityTemp(result) {
   description.innerHTML = result.data.weather[0].description;
 
   let windSpeed = document.querySelector("#windSpeed");
-  windSpeed.innerHTML = result.data.wind.speed;
+  windSpeed.innerHTML = Math.round(result.data.wind.speed);
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
