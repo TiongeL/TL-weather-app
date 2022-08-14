@@ -22,11 +22,12 @@ h4 {
   font-weight: 900px;
 }
 
-strong {
+#currentTemp {
   position: relative;
   font-size: 55px;
   color: red;
 }
+
 ul {
   text-align: center;
   padding: 0;
@@ -36,28 +37,10 @@ li {
   list-style: none;
 }
 
-.search {
-  position: absolute;
-  right: 400px;
-  font-size: 18px;
-  border-radius: 25px;
-  padding: 5px 25px;
-  background-color: #36327f;
-  opacity: 40%;
-  color: #8571a7;
-  border: 2px;
-}
-
-.submit {
-  border-radius: 25px;
-  font-size: 18px;
-  color: white;
-  padding: 5px 25px;
-  border: 2px;
-  background-color: #3c679e;
-  opacity: 40%;
-  position: absolute;
-  right: 270px;
+#geoLocationButton {
+  background-color: red;
+  border-radius: 10px;
+  border-style: none;
 }
 
 .container {
@@ -65,17 +48,33 @@ li {
   border-radius: 40px;
   max-width: 900px;
   margin: 30px auto;
-  background: radial-gradient(
-    circle at 18.7% 37.8%,
-    rgb(250, 250, 250) 0%,
-    rgb(225, 234, 238) 90%
-  );
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.search {
+  right: 390px;
+}
+.submit {
+  right: 270px;
+}
+
+.search,
+.submit {
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  padding: 5px 25px;
+  border: 2px;
+  background: lightsteelblue;
+  opacity: 40%;
+  position: absolute;
 }
 
 .high,
 .low,
 .high-low-break {
-  color: #3c679e;
+  color: navy;
+  opacity: 50%;
   font-size: 30px;
   font-weight: bolder;
 }
@@ -91,11 +90,12 @@ li {
 
 .card1,
 .card2 {
-  background: red;
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   position: relative;
   right: -475px;
   top: -170px;
   text-align: center;
+  border-radius: 20px;
 }
 
 .gitLink {
@@ -121,10 +121,17 @@ li {
   font-size: 18px;
 }
 .weather-forecast-temperature-min {
-  color: rgb(175, 26, 76);
-  opacity: 30%;
+  color: navy;
+  opacity: 50%;
 }
 .forecast-block {
   margin-top: 0;
   padding: 0px;
+}
+#description {
+  text-transform: capitalize;
+}
+#H,
+#L {
+  font-size: 25px;
 }
