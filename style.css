@@ -1,5 +1,5 @@
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -18,14 +18,14 @@ h2 {
 
 h4 {
   text-align: center;
-  color: #341b6a;
+  color: black;
   font-weight: 900px;
 }
 
 #currentTemp {
   position: relative;
   font-size: 55px;
-  color: red;
+  color: #e97453;
 }
 
 ul {
@@ -38,9 +38,11 @@ li {
 }
 
 #geoLocationButton {
-  background-color: red;
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 15px;
   border-style: none;
+  color: blue;
+  font-size: larger;
 }
 
 .container {
@@ -48,7 +50,11 @@ li {
   border-radius: 40px;
   max-width: 900px;
   margin: 30px auto;
-  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  background: linear-gradient(
+    to top,
+    rgb(197, 235, 171) 52.5%,
+    rgb(113, 202, 128) 100.2%
+  );
 }
 
 .search {
@@ -62,10 +68,10 @@ li {
 .submit {
   border-radius: 25px;
   font-size: 18px;
-  color: white;
+  color: darkgray;
   padding: 5px 25px;
   border: 2px;
-  background: lightsteelblue;
+  background: white;
   opacity: 40%;
   position: absolute;
 }
@@ -73,10 +79,17 @@ li {
 .high,
 .low,
 .high-low-break {
-  color: navy;
-  opacity: 50%;
+  color: black;
   font-size: 30px;
   font-weight: bolder;
+  opacity: 50%;
+}
+
+#H,
+#L {
+  font-size: 30px;
+  color: black;
+  opacity: 65%;
 }
 
 .main {
@@ -90,27 +103,18 @@ li {
 
 .card1,
 .card2 {
-  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  font-weight: lighter;
   position: relative;
   right: -475px;
   top: -170px;
   text-align: center;
   border-radius: 20px;
+  color: black;
+  opacity: 80%;
 }
 
-.gitLink {
-  text-align: center;
-}
-.units,
-.active,
-.not-active {
-  color: rgb(255, 115, 0);
-  font-size: smaller;
-  font-weight: lighter;
-  cursor: default;
-  text-decoration: none;
-}
 .forecast {
+  font-weight: lighter;
   padding: 0 auto;
   display: block;
 }
@@ -121,17 +125,23 @@ li {
   font-size: 18px;
 }
 .weather-forecast-temperature-min {
-  color: navy;
-  opacity: 50%;
+  color: #ec6e4c;
+  opacity: 70%;
 }
 .forecast-block {
+  font-weight: lighter;
   margin-top: 0;
   padding: 0px;
 }
 #description {
   text-transform: capitalize;
 }
-#H,
-#L {
-  font-size: 25px;
+.gitLink {
+  text-decoration: none;
+  color: black;
+  opacity: 70%;
+}
+.gitLink:hover {
+  color: #8fd28b;
+  transition: all 200ms ease-in-out;
 }
