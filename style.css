@@ -25,7 +25,7 @@ h4 {
 #currentTemp {
   position: relative;
   font-size: 55px;
-  color: #e97453;
+  color: #0d196b;
 }
 
 ul {
@@ -41,7 +41,7 @@ li {
   background-color: white;
   border-radius: 15px;
   border-style: none;
-  color: blue;
+  color: #0d196b;
   font-size: larger;
 }
 
@@ -50,10 +50,10 @@ li {
   border-radius: 40px;
   max-width: 900px;
   margin: 30px auto;
-  background: linear-gradient(
-    to top,
-    rgb(197, 235, 171) 52.5%,
-    rgb(113, 202, 128) 100.2%
+  background: radial-gradient(
+    827px at 47.3% 48%,
+    rgb(255, 255, 255) 0%,
+    rgb(138, 192, 216) 90%
   );
 }
 
@@ -68,11 +68,11 @@ li {
 .submit {
   border-radius: 25px;
   font-size: 18px;
-  color: darkgray;
+  color: #0d196b;
   padding: 5px 25px;
   border: 2px;
+  opacity: 50%;
   background: white;
-  opacity: 40%;
   position: absolute;
 }
 
@@ -81,15 +81,15 @@ li {
 .high-low-break {
   color: black;
   font-size: 30px;
-  font-weight: bolder;
-  opacity: 50%;
+  opacity: 90%;
 }
 
 #H,
 #L {
   font-size: 30px;
   color: black;
-  opacity: 65%;
+  font-weight: 700px;
+  opacity: 90%;
 }
 
 .main {
@@ -126,8 +126,8 @@ li {
   font-size: 18px;
 }
 .weather-forecast-temperature-min {
-  color: #ec6e4c;
-  opacity: 70%;
+  color: #0d196b;
+  opacity: 90%;
 }
 .forecast-block {
   font-weight: lighter;
