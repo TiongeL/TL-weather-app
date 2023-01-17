@@ -140,9 +140,10 @@ li {
 .gitLink {
   text-decoration: none;
   color: black;
-  opacity: 70%;
+  font-size: medium;
+  opacity: 90%;
 }
 .gitLink:hover {
-  color: #8fd28b;
+  color: #0d196b;
   transition: all 200ms ease-in-out;
 }
